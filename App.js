@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -19,7 +19,12 @@ import AppText from './components/core/AppText';
 import {colors, metrics, style} from './themes';
 import TopicsList from './components/TopicsList';
 
+import {TopicDescription} from './components/TopicDescription';
+import topics from './topics';
+
 const App: () => React$Node = () => {
+  const [topicToShow, toggleTopicToShow] = useState(null);
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
