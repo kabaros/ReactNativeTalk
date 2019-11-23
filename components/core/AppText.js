@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
-import {style} from '../../themes';
+import {style, colors} from '../../themes';
 
 const getDefaultStyle = ({h1, h2}) => {
   if (h1) return style.h1;
@@ -15,6 +15,7 @@ const AppText = props => {
   const defaultStyle = getDefaultStyle(props);
   const finalStyle = [
     defaultStyle,
+    {color: colors.text},
     {textAlign: centered ? 'center' : 'auto'},
     props.style,
   ];

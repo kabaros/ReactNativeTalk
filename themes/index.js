@@ -8,20 +8,21 @@ export const type = {
   emphasis: 'HelveticaNeue-Italic',
 };
 
+const baseFontSize = 16;
+
 export const size = {
-  h1: 32,
-  h2: 24,
-  regular: 16,
-  medium: 14,
-  small: 12,
-  tiny: 8.5,
+  h1: baseFontSize * 2,
+  h2: baseFontSize * 1.5,
+  regular: baseFontSize,
+  medium: baseFontSize * 0.9,
+  small: baseFontSize * 0.8,
+  tiny: baseFontSize * 0.5,
 };
 
 export const style = {
   h1: {
     fontFamily: type.base,
     fontSize: size.h1,
-    fontWeight: 'bold',
   },
   h2: {
     fontFamily: type.base,
@@ -57,19 +58,26 @@ export const metrics = {
   doubleBaseMargin: 20,
   smallMargin: 5,
   doubleSection: 50,
-  horizontalLineHeight: 1,
+  horizontalLineHeight: 0.4,
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,
   navBarHeight: Platform.OS === 'ios' ? 64 : 54,
 };
 
 export const colors = {
-  // background: '#1F0808',
-  background: '#FFF',
   text: '#000',
-  highlightText: '#1292B4',
   lighterText: '#444',
-  title: '#1292B4',
-  // border: '#483F53',
+  background: '#FFF',
+  footer: '#fff',
+  highlightText: '#1292B4',
   border: '#eaeaea',
 };
+
+// export const colors = {
+//   background: '#252525',
+//   footer: '#252525',
+//   text: '#ffda1f',
+//   lighterText: '#ffda1f',
+//   highlightText: '#ffbe00',
+//   border: '#fbe6b7a8',
+// };

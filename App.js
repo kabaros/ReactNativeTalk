@@ -19,8 +19,8 @@ import AppText from './components/core/AppText';
 import {colors, metrics, style} from './themes';
 import TopicsList from './components/TopicsList';
 
-import {TopicDescription} from './components/TopicDescription';
-import topics from './topics';
+import Styling from './components/slides/Styling';
+import ScalingStyles from './components/slides/ScalingStyles';
 
 const App: () => React$Node = () => {
   const [topicToShow, toggleTopicToShow] = useState(null);
@@ -28,7 +28,7 @@ const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={styles.safeArea}>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
@@ -37,10 +37,12 @@ const App: () => React$Node = () => {
               Intro to React Native {'\r'}
               <AppText style={[style.h2]}>(Layout and Styling)</AppText>
             </AppText>
-
             <TopicsList />
           </View>
         </ScrollView>
+        <View style={styles.footer}>
+          <AppText style={styles.footerText}>Mozafar @kabaros</AppText>
+        </View>
       </SafeAreaView>
     </>
   );
@@ -56,6 +58,21 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     textAlign: 'center',
+  },
+  footer: {
+    // backgroundColor: 'black',
+    // height: 30,
+    backgroundColor: colors.footer,
+    alignItems: 'flex-end',
+    margin: 20,
+  },
+  footerText: {
+    ...style.small,
+    color: colors.lighterText,
+  },
+  safeArea: {
+    backgroundColor: colors.footer,
+    flex: 1,
   },
 });
 

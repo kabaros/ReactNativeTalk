@@ -1,21 +1,19 @@
 import React, {useState} from 'react';
 import {TouchableOpacity, View, Text, StyleSheet} from 'react-native';
+import AppText from '../core/AppText';
 
 const ScalingStyles = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'space-around',
-        color: 'red',
-        minHeight: 200,
-      }}>
-      <Text style={{color: 'green'}}>
-        All text has to be inside a {'< Text />'} component
-      </Text>
-      <Text>Styles are normal JS objects (but use StyleSheet.create)</Text>
-      <Text>All of the core components accept a prop named style</Text>
-      <Text>Style inheritance is limited to text subtrees (no cascade)</Text>
+    <View style={{justifyContent: 'space-around', minHeight: 300}}>
+      <AppText>
+        Create a component "CustomText" that encapsulates Text and use this
+        component across your app
+      </AppText>
+      <AppText>Use StyleSheet.create()</AppText>
+      <AppText>Theming: abstract Fonts, Base Metrics and Colors</AppText>
+      <AppText>Android vs iOS</AppText>
+      <AppText>Scaling font sizes</AppText>
+      <AppText>Styled Components</AppText>
     </View>
   );
 };
