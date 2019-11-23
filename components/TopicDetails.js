@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {colors, style, metrics, size} from '../themes';
+import {Colors, Styles, Metrics, Sizes} from './theme';
 import AppText from './core/AppText';
 
 export const TopicDetails = ({bulletPoints}) => {
@@ -19,14 +19,14 @@ export const TopicDetails = ({bulletPoints}) => {
 
 const styles = StyleSheet.create({
   bulletContainer: {
-    borderBottomWidth: metrics.horizontalLineHeight,
-    borderBottomColor: colors.border,
-    paddingLeft: metrics.marginHorizontal,
+    borderBottomWidth: Metrics.horizontalLineHeight,
+    borderBottomColor: Colors.border,
+    paddingLeft: Metrics.marginHorizontal,
   },
   bulletPoint: {
-    ...style.normal,
-    color: colors.lighterText,
-    lineHeight: size.regular * 1.5,
-    padding: metrics.padding,
+    ...Styles.normal,
+    color: Colors.lighterText,
+    lineHeight: Sizes.regular * 1.5,
+    padding: Metrics.padding,
   },
 });

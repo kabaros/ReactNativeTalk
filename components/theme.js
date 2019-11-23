@@ -2,15 +2,9 @@ import {Dimensions, Platform} from 'react-native';
 
 const {width, height} = Dimensions.get('window');
 
-export const type = {
-  base: 'Avenir-Book',
-  bold: 'Avenir-Black',
-  emphasis: 'HelveticaNeue-Italic',
-};
-
 const baseFontSize = 16;
 
-export const size = {
+export const Sizes = {
   h1: baseFontSize * 2,
   h2: baseFontSize * 1.5,
   regular: baseFontSize,
@@ -19,34 +13,40 @@ export const size = {
   tiny: baseFontSize * 0.5,
 };
 
-export const style = {
+export const FontType = {
+  base: 'Avenir-Book',
+  bold: 'Avenir-Black',
+  emphasis: 'HelveticaNeue-Italic',
+};
+
+export const Styles = {
   h1: {
-    fontFamily: type.base,
-    fontSize: size.h1,
+    fontFamily: FontType.base,
+    fontSize: Sizes.h1,
   },
   h2: {
-    fontFamily: type.base,
-    fontSize: size.h2,
+    fontFamily: FontType.base,
+    fontSize: Sizes.h2,
   },
   normal: {
-    fontFamily: type.base,
-    fontSize: size.regular,
+    fontFamily: FontType.base,
+    fontSize: Sizes.regular,
   },
   medium: {
-    fontFamily: type.base,
-    fontSize: size.medium,
+    fontFamily: FontType.base,
+    fontSize: Sizes.medium,
   },
   small: {
-    fontFamily: type.base,
-    fontSize: size.small,
+    fontFamily: FontType.base,
+    fontSize: Sizes.small,
   },
   description: {
-    fontFamily: type.base,
-    fontSize: size.medium,
+    fontFamily: FontType.base,
+    fontSize: Sizes.medium,
   },
 };
 
-export const metrics = {
+export const Metrics = {
   marginHorizontal: 10,
   marginVertical: 10,
 
@@ -64,7 +64,7 @@ export const metrics = {
   navBarHeight: Platform.OS === 'ios' ? 64 : 54,
 };
 
-export const colors = {
+export const Colors = {
   text: '#000',
   lighterText: '#444',
   background: '#FFF',
@@ -73,7 +73,10 @@ export const colors = {
   border: '#eaeaea',
 };
 
-// export const colors = {
+const scale = size => {
+  (width * size) / 315;
+};
+// export const Colors = {
 //   background: '#252525',
 //   footer: '#252525',
 //   text: '#ffda1f',

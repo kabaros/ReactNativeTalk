@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {TopicDetails} from './TopicDetails';
 import AppText from './core/AppText';
-import {metrics, colors, style} from '../themes';
+import {Metrics, Colors, Styles} from './theme';
 import Styling from './slides/Styling';
 import ScalingStyles from './slides/ScalingStyles';
 
@@ -21,7 +21,7 @@ export const TopicDescription = props => {
           style={[
             styles.topicHeader,
             styles.titleStyle,
-            !showMoreInfo ? style.small : null,
+            !showMoreInfo ? Styles.small : null,
           ]}>
           {title}
         </AppText>
@@ -29,7 +29,7 @@ export const TopicDescription = props => {
           style={[
             styles.topicHeader,
             styles.subTitleStyle,
-            !showMoreInfo ? style.small : null,
+            !showMoreInfo ? Styles.small : null,
           ]}>
           {subtitle}
         </AppText>
@@ -52,21 +52,21 @@ const getCustomCompnent = name => {
 const styles = StyleSheet.create({
   topicContainer: {
     flexDirection: 'row',
-    margin: metrics.marginVertical,
-    borderBottomColor: colors.border,
-    borderBottomWidth: metrics.horizontalLineHeight,
+    margin: Metrics.marginVertical,
+    borderBottomColor: Colors.border,
+    borderBottomWidth: Metrics.horizontalLineHeight,
   },
   topicHeader: {
-    paddingTop: metrics.doublePadding,
-    paddingBottom: metrics.padding,
+    paddingTop: Metrics.doublePadding,
+    paddingBottom: Metrics.padding,
   },
   titleStyle: {
-    ...style.regular,
+    ...Styles.regular,
     flex: 3,
-    color: colors.highlightText,
+    color: Colors.highlightText,
   },
   subTitleStyle: {
-    ...style.medium,
+    ...Styles.medium,
     flex: 2,
   },
 });

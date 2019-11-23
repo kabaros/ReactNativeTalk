@@ -16,7 +16,7 @@ import {
   StatusBar,
 } from 'react-native';
 import AppText from './components/core/AppText';
-import {colors, metrics, style} from './themes';
+import {Colors, Metrics, Styles} from './components/theme';
 import TopicsList from './components/TopicsList';
 
 import Styling from './components/slides/Styling';
@@ -33,15 +33,18 @@ const App: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.sectionContainer}>
-            <AppText centered style={[style.h1]}>
+            <AppText centered style={[Styles.h1]}>
               Intro to React Native {'\r'}
-              <AppText style={[style.h2]}>(Layout and Styling)</AppText>
+              <AppText style={[Styles.h2]}>(Layout and Styling)</AppText>
             </AppText>
             <TopicsList />
           </View>
         </ScrollView>
         <View style={styles.footer}>
           <AppText style={styles.footerText}>Mozafar @kabaros</AppText>
+          <AppText style={styles.footerText}>
+            github.com/kabaros/ReactNativeTalk
+          </AppText>
         </View>
       </SafeAreaView>
     </>
@@ -50,11 +53,11 @@ const App: () => React$Node = () => {
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: colors.background,
+    backgroundColor: Colors.background,
   },
   sectionContainer: {
-    marginTop: metrics.doubleSection,
-    paddingHorizontal: metrics.section,
+    marginTop: Metrics.section,
+    paddingHorizontal: Metrics.section,
   },
   sectionTitle: {
     textAlign: 'center',
@@ -62,16 +65,16 @@ const styles = StyleSheet.create({
   footer: {
     // backgroundColor: 'black',
     // height: 30,
-    backgroundColor: colors.footer,
+    backgroundColor: Colors.footer,
     alignItems: 'flex-end',
     margin: 20,
   },
   footerText: {
-    ...style.small,
-    color: colors.lighterText,
+    ...Styles.small,
+    color: Colors.lighterText,
   },
   safeArea: {
-    backgroundColor: colors.footer,
+    backgroundColor: Colors.footer,
     flex: 1,
   },
 });

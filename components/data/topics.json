@@ -3,10 +3,10 @@
     "title": "Who am I",
     "subtitle": "Mozafar @kabaros",
     "details": [
-      "Twitter: @kabaros",
+      "github.com/kabaros/ReactNativeTalk",
       "Glovo / Barcelona (since September)",
-      "CodeYourFuture Glasgow",
-      "MigraCode Barcelona (migracode.eu)"
+      "CodeYourFuture previously",
+      "Migracode Barcelona (migracode.eu)"
     ]
   },
   {
@@ -27,7 +27,8 @@
       "Code once for Android and iOS",
       "Development Experience",
       "Performance (and native feel)",
-      "CodePush (OTA updates)"
+      "CodePush (OTA updates)",
+      "It's not only startups or hobby projects"
     ]
   },
   {
@@ -45,11 +46,9 @@
     "subtitle": "The Layout engine",
     "details": [
       "Yoga is an open-source, cross-platform layout library that implements Flexbox.",
-      "Flexbox (with few differences)",
-      "Expressive layout library, not implementing all of CSS.",
-      "No support for styling properties that have no impact on layout",
-      "https://yogalayout.com/docs",
-      "RTL is a first-class citizen"
+      "Expressive layout library, not implementing all of CSS (just bits that have impact on layout)",
+      "RTL is a first-class citizen",
+      "https://yogalayout.com/docs"
     ]
   },
   {
