@@ -1,22 +1,26 @@
 import React from 'react';
+import {StyleSheet, Text} from 'react-native';
+import {style} from '../../themes';
 
-const getFontSize = ({ massive, big, normal, small }) => {
-    if(massive) return 30;
-    if(big) return 24;
-    if(small) return 12;
-    else return 16;
-}
-const AppTest = props => {
-    const { massive, big, normal, small } = props;
+const getDefaultStyle = ({h1, h2}) => {
+  if (h1) return style.h1;
+  if (h2) return style.h2;
 
-    const fontSize = getFontSize(props)
-
-    return <Text style={[styles.textStyle, {fontSize}]} />
+  return style.normal;
 };
 
-const styles = StyleSheet.create({
-    textStyle: {
-        lineHeight: 
-    }
-})
-export default AppTest;
+const AppText = props => {
+  const {centered, style} = props;
+
+  const defaultStyle = getDefaultStyle(props);
+  const finalStyle = [
+    defaultStyle,
+    {textAlign: centered ? 'center' : 'auto'},
+    props.style,
+  ];
+
+  return <Text style={finalStyle}>{props.children}</Text>;
+};
+
+const styles = StyleSheet.create({});
+export default AppText;

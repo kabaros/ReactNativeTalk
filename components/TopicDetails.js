@@ -1,5 +1,7 @@
 import React, {Fragment} from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {colors, style, metrics, size} from '../themes';
+import AppText from './core/AppText';
 
 export const TopicDetails = ({bulletPoints}) => {
   return (
@@ -7,7 +9,7 @@ export const TopicDetails = ({bulletPoints}) => {
       {bulletPoints.map((point, index) => {
         return (
           <View key={index} style={styles.bulletContainer}>
-            <Text style={styles.bulletPoint}>{point}</Text>
+            <AppText style={styles.bulletPoint}>{point}</AppText>
           </View>
         );
       })}
@@ -16,16 +18,15 @@ export const TopicDetails = ({bulletPoints}) => {
 };
 
 const styles = StyleSheet.create({
-  container: {},
   bulletContainer: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#eaeaea',
-    marginLeft: 10,
+    borderBottomWidth: metrics.horizontalLineHeight,
+    borderBottomColor: colors.border,
+    paddingLeft: metrics.marginHorizontal,
   },
   bulletPoint: {
-    color: '#444',
-    fontSize: 16,
-    lineHeight: 28,
-    padding: 10,
+    ...style.normal,
+    color: colors.lighterText,
+    lineHeight: size.regular * 1.5,
+    padding: metrics.padding,
   },
 });

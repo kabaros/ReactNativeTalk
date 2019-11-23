@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {TopicDetails} from './TopicDetails';
+import AppText from './core/AppText';
+import {metrics, colors, style} from '../themes';
 
 export const TopicDescription = props => {
   const {topic, onClickMoreInfo, showMoreInfo} = props;
@@ -11,13 +13,22 @@ export const TopicDescription = props => {
       <TouchableOpacity
         onPress={onClickMoreInfo}
         style={[styles.topicContainer]}>
-        <Text style={[styles.titleStyle, !showMoreInfo ? styles.small : null]}>
+        <AppText
+          style={[
+            styles.topicHeader,
+            styles.titleStyle,
+            !showMoreInfo ? style.small : null,
+          ]}>
           {title}
-        </Text>
-        <Text
-          style={[styles.subTitleStyle, !showMoreInfo ? styles.small : null]}>
+        </AppText>
+        <AppText
+          style={[
+            styles.topicHeader,
+            styles.subTitleStyle,
+            !showMoreInfo ? style.small : null,
+          ]}>
           {subtitle}
-        </Text>
+        </AppText>
       </TouchableOpacity>
       {showMoreInfo && details && <TopicDetails bulletPoints={details} />}
     </>
@@ -27,36 +38,21 @@ export const TopicDescription = props => {
 const styles = StyleSheet.create({
   topicContainer: {
     flexDirection: 'row',
-    margin: 10,
-    borderBottomColor: '#d9d9d9',
-    borderBottomWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    margin: metrics.marginVertical,
+    borderBottomColor: colors.border,
+    borderBottomWidth: metrics.horizontalLineHeight,
   },
-
-  small: {
-    fontSize: 10,
+  topicHeader: {
+    paddingTop: metrics.doublePadding,
+    paddingBottom: metrics.padding,
   },
-
   titleStyle: {
+    ...style.regular,
     flex: 3,
-    paddingVertical: 16,
-    fontSize: 16,
-    fontWeight: '400',
-    color: '#1292B4',
+    color: colors.highlightText,
   },
   subTitleStyle: {
+    ...style.medium,
     flex: 2,
-    paddingVertical: 16,
-    fontWeight: '400',
-    fontSize: 14,
-    color: '#444',
-    textAlign: 'center',
-  },
-  moreInfo: {
-    textAlign: 'center',
-    color: '#003459',
-    fontSize: 16,
-    lineHeight: 24,
   },
 });

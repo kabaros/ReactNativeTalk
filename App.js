@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, {useState} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -15,21 +15,11 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-import {TopicDescription} from './components/TopicDescription';
-import topics from './topics';
+import AppText from './components/core/AppText';
+import {colors, metrics, style} from './themes';
+import TopicsList from './components/TopicsList';
 
 const App: () => React$Node = () => {
-  const [topicToShow, toggleTopicToShow] = useState(null);
-
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -37,21 +27,13 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Intro to React Native</Text>
-              <Text style={[styles.sectionTitle, {fontSize: 18, margin: 10}]}>
-                (Layout and Styling)
-              </Text>
-              {topics.map((topic, index) => (
-                <TopicDescription
-                  onClickMoreInfo={() => toggleTopicToShow(index)}
-                  showMoreInfo={topicToShow === index}
-                  key={index}
-                  topic={topic}
-                />
-              ))}
-            </View>
+          <View style={styles.sectionContainer}>
+            <AppText centered style={[style.h1]}>
+              Intro to React Native {'\r'}
+              <AppText style={[style.h2]}>(Layout and Styling)</AppText>
+            </AppText>
+
+            <TopicsList />
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -61,41 +43,14 @@ const App: () => React$Node = () => {
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
+    backgroundColor: colors.background,
   },
   sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+    marginTop: metrics.doubleSection,
+    paddingHorizontal: metrics.section,
   },
   sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
     textAlign: 'center',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
   },
 });
 
