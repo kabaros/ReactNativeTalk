@@ -9,7 +9,7 @@ These are the notes accompanying my talk about React Native at BarcelonaJS (Nove
 Mozafar
 
 - Twitter [@kabaros](https://twitter.com/kabaros/)
-- Work at Glovo/Barcelona since September 2019
+- Work at Glovo/Barcelona since September 2019 **<- [Hiring!](https://glovoapp.com/en/jobs)**
 - [MigraCode Barcelona](https://migracode.eu) **<- Check them out!**
   - Previously Volunteer/co-founder of CodeYourFuture Glasgow
 
@@ -50,9 +50,11 @@ Three live app:
   - It is still not native
 - Naviation/Routing
 - Getting Started: Expo vs CRNA vs react-native
-  - Use `react-native`
+  - The documentation for Getting Started is confusing but just use `react-native CLI`
   - `npx react-native init BarcelonaJS`
   - `cd BarcelonaJS` and `npx react-native run-ios`
+  - https://facebook.github.io/react-native/docs/getting-started
+  - You play with [Snack](https://snack.expo.io/) - a CodePen-like site for React Native - to quickly get a feel of building apps with RN
 - Linking native libraries (when it goes wrong)
 
 # Layout in React Native
