@@ -73,9 +73,6 @@ export const Colors = {
   border: '#eaeaea',
 };
 
-const scale = size => {
-  (width * size) / 315;
-};
 // export const Colors = {
 //   background: '#252525',
 //   footer: '#252525',
@@ -84,3 +81,8 @@ const scale = size => {
 //   highlightText: '#ffbe00',
 //   border: '#fbe6b7a8',
 // };
+
+const scale = size => {
+  const {width: deviceWidth} = Dimensions.get('window');
+  return (deviceWidth * size) / 375; // iphone6 width
+};

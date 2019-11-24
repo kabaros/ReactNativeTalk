@@ -5,8 +5,9 @@ import AppText from './core/AppText';
 import {Metrics, Colors, Styles} from './theme';
 import Styling from './slides/Styling';
 import ScalingStyles from './slides/ScalingStyles';
+import Yoga from './slides/Yoga';
 
-export const TopicDescription = props => {
+const TopicTitle = props => {
   const {topic, onClickMoreInfo, showMoreInfo} = props;
   const {title, subtitle, details, component} = topic;
 
@@ -39,6 +40,7 @@ export const TopicDescription = props => {
     </>
   );
 };
+export default TopicTitle;
 
 const getCustomCompnent = name => {
   if (name === 'Styling') {
@@ -46,6 +48,9 @@ const getCustomCompnent = name => {
   }
   if (name === 'ScalingStyles') {
     return <ScalingStyles />;
+  }
+  if (name === 'Yoga') {
+    return <Yoga />;
   }
 };
 
@@ -68,5 +73,6 @@ const styles = StyleSheet.create({
   subTitleStyle: {
     ...Styles.medium,
     flex: 2,
+    textAlign: 'right',
   },
 });

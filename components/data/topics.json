@@ -1,16 +1,16 @@
 [
   {
     "title": "Who am I",
-    "subtitle": "",
+    "subtitle": "Mozafar",
     "details": [
-      "Mozafar / Sud❦n ↝ Holland ↝ London ↝ Glasg❦w  ↝ Barcelona",
+      "Mozafar / Sudan ↝ Holland ↝ London ↝ Glasg❦w  ↝ Barcelona",
       ".... ↝ ex-CodeYourFuture ↝ Kindaba ↝ Glovo (since September) ↝ Migracode Barcelona (migracode.eu)",
       "github.com/kabaros/ReactNativeTalk"
     ]
   },
   {
     "title": "My Experience with RN",
-    "subtitle": "3.5 published apps",
+    "subtitle": "3.5 apps",
     "details": [
       "Dawa - Medicine in Sudan",
       "Kindaba - Social network for your family",
@@ -22,15 +22,18 @@
     "subtitle": "The Good",
     "details": [
       "It is React",
-      "Code once for Android and iOS",
       "Development Experience",
-      "Performance (and native feel)",
+      "Performance and Native feel",
       "CodePush (OTA updates)",
-      "It's not only startups or hobby projects"
+      "Code once for Android and iOS",
+      {
+        "infoText": "It's not only startups or hobby projects",
+        "infoLink": "https://facebook.github.io/react-native/showcase.html"
+      }
     ]
   },
   {
-    "title": "Why not React Native",
+    "title": "Why not React Native?",
     "subtitle": "The Bad / Confusing",
     "details": [
       "It is React",
@@ -41,31 +44,29 @@
   },
   {
     "title": "Yoga",
-    "subtitle": "The Layout engine",
-    "details": [
-      "Yoga is an open-source, cross-platform layout library that implements Flexbox.",
-      "Expressive layout library, not implementing all of CSS (just bits that have impact on layout)",
-      "RTL is a first-class citizen",
-      "https://yogalayout.com/docs"
-    ]
+    "subtitle": "The Layout",
+    "component": "Yoga"
   },
   {
-    "title": "Styling in RN",
-    "subtitle": "The basics",
+    "title": "Styling",
+    "subtitle": "Styling Basics",
     "component": "Styling"
   },
   {
     "title": "Scaling Styles",
-    "subtitle": "",
+    "subtitle": "Beyond the basics",
     "component": "ScalingStyles"
   },
   {
     "title": "Conculsion",
     "subtitle": "",
     "details": [
-      "Give it a try",
+      {
+        "infoText": "Give it a try - https://snack.expo.io",
+        "infoLink": "https://snack.expo.io"
+      },
       "MigraCode https://migracode.eu",
-      "Mozafar @Kabaros"
+      "Questions?"
     ]
   }
 ]

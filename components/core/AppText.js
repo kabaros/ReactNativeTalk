@@ -2,9 +2,10 @@ import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {Styles, Colors} from '../theme';
 
-const getDefaultStyle = ({h1, h2}) => {
+const getDefaultStyle = ({h1, h2, small}) => {
   if (h1) return Styles.h1;
   if (h2) return Styles.h2;
+  if (small) return Styles.small;
 
   return Styles.normal;
 };

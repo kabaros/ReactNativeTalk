@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import {TopicDescription} from './TopicDescription';
+import TopicTitle from './TopicTitle';
 import topics from './data/topics';
 
 const TopicsList = () => {
   const [topicToShow, toggleTopicToShow] = useState(null);
   return topics.map((topic, index) => (
-    <TopicDescription
+    <TopicTitle
       onClickMoreInfo={() => toggleTopicToShow(index)}
       showMoreInfo={topicToShow === index}
       key={index}
