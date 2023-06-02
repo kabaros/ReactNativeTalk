@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ReactNativeTalk
+  annotations:
+    github.com/project-slug: kabaros/ReactNativeTalk
+spec:
+  type: other
+  lifecycle: experimental
+  owner: kabaros
